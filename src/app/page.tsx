@@ -826,13 +826,14 @@ export default function WealthCalculator() {
                       tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
                     />
                     <Tooltip
-                      formatter={(value: number) => [`$${value.toLocaleString()}`, 'Wealth']}
+                      formatter={(value: any) => [`$${Number(value).toLocaleString()}`, 'Wealth']}
                       labelFormatter={(label) => `Age ${label}`}
                       contentStyle={{
-                        backgroundColor: 'white',
-                        border: '1px solid #e2e8f0',
+                        backgroundColor: '#0f172a', /* slate-900 */
+                        border: '1px solid #1e293b', /* slate-800 */
                         borderRadius: '8px',
-                        fontSize: '14px'
+                        fontSize: '14px',
+                        color: '#cbd5e1' /* slate-300 */
                       }}
                     />
                     <Area
